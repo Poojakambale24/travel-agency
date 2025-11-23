@@ -1,15 +1,10 @@
-# Simple static site served via Nginx
-FROM nginx:stable-alpine
+# 1. Use official nginx image as base
+FROM nginx:alpine
 
-# Use a non-root build stage if extending; here we copy directly
-COPY ./index.html /usr/share/nginx/html/index.html
-COPY ./about.html /usr/share/nginx/html/about.html
-COPY ./style.css /usr/share/nginx/html/style.css
+# 2. Remove default nginx website files
+RUN rm -rf /usr/share/nginx/html/*
 
-# Default Nginx exposes port 80
-EXPOSE 80
+# 3. Copy our HTML/CSS files into nginx web root
+COPY . /usr/share/nginx/html
 
-# Health metadata (optional)
-HEALTHCHECK --interval=30s --timeout=3s --start-period=10s CMD wget -qO- http://localhost:80/index.html || exit 1
-
-# Nginx runs as default user; no CMD override needed
+# 4. Nginx automatically serves files from /usr/share/nginx/html on port 80
