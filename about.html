@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - WanderWise Travel</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>WanderWise Travel</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" aria-current="page">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="content">
+    <h2>Our Story</h2>
+    <p>WanderWise Travel was founded with a single goal: to make travel planning effortless and inspiring. We partner with trusted local guides to offer authentic experiences in every destination.</p>
+
+    <h3>Why Choose Us</h3>
+    <ul class="features">
+      <li>Personalized itineraries crafted by experts</li>
+      <li>Sustainable & responsible travel practices</li>
+      <li>24/7 support while you travel</li>
+      <li>Transparent pricing with no hidden fees</li>
+    </ul>
+
+    <h3>Our Mission</h3>
+    <p>To connect travelers with meaningful journeys that enrich lives and foster cultural understanding.</p>
+
+    <section class="team">
+      <h3>Meet the Team</h3>
+      <div class="grid team-grid">
+        <article class="card small">
+          <h4>Priya Sharma</h4>
+          <p>Lead Travel Curator</p>
+        </article>
+        <article class="card small">
+          <h4>James Walker</h4>
+          <p>Destination Researcher</p>
+        </article>
+        <article class="card small">
+          <h4>Sofia Martinez</h4>
+          <p>Customer Experience Lead</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> WanderWise Travel. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Travel Agency - Explore the World</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>WanderWise Travel</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" role="banner">
+    <div class="hero-content">
+      <h2>Discover Your Next Destination</h2>
+      <p>Curated journeys, authentic experiences, unforgettable memories.</p>
+      <a class="btn" href="#destinations">View Destinations</a>
+    </div>
+  </section>
+
+  <main>
+    <section id="destinations" class="grid">
+      <article class="card">
+        <img src="https://via.placeholder.com/400x240?text=Beach" alt="Sunny tropical beach" />
+        <h3>Tropical Escapes</h3>
+        <p>Relax on pristine beaches with turquoise waters.</p>
+      </article>
+      <article class="card">
+        <img src="https://via.placeholder.com/400x240?text=Mountains" alt="Snowy mountain range" />
+        <h3>Mountain Adventures</h3>
+        <p>Hiking, climbing, and breathtaking alpine views.</p>
+      </article>
+      <article class="card">
+        <img src="https://via.placeholder.com/400x240?text=City" alt="Modern city skyline at dusk" />
+        <h3>Urban Discoveries</h3>
+        <p>Cultural hotspots, cuisine, and vibrant nightlife.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> WanderWise Travel. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
